@@ -115,7 +115,7 @@
     function playSound(buffer) {
         sourceNode.buffer = buffer;
         sourceNode.start(0);
-        sourceNode.loop = true;
+        sourceNode.loop = false;
     }
 
     // log if an error occurs
@@ -160,7 +160,7 @@
         // set translate on the canvas
         ctx.translate(-1, 0);
         // draw the copied image
-        ctx.drawImage(tempCanvas, 0, 0, 800, 512, 0, 0, 800, 512);
+        ctx.drawImage(tempCanvas, 0, 0, 800, 512, 0, -100, 800, 512);
 
         // reset the transformation matrix
         ctx.setTransform(1, 0, 0, 1, 0, 0);
